@@ -1,6 +1,9 @@
 # Documentation: https://docs.brew.sh/Formula-Cookbook
 #                https://rubydoc.brew.sh/Formula
 # PLEASE REMOVE ALL GENERATED COMMENTS BEFORE SUBMITTING YOUR PULL REQUEST!
+
+require "formula"
+
 class Gyoza < Formula
   desc "gyoza!"
   homepage "https://github.com/tatsuki26/gyoza"
@@ -19,7 +22,7 @@ class Gyoza < Formula
                           "--prefix=#{prefix}"
     # system "cmake", ".", *std_cmake_args
     system "make", "install" # if this fails, try separate make/make install steps
-    bin.install "gyoza"
+    bin.install "gyoza.x"
   end
 
   test do
